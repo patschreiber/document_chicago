@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title
+      = (yield :title).present? ? "#{yield :title} | #document Chicago" : "#document Chicago"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{'http-equiv' => 'Content-Language', :content => 'en'}
+    %meta{:content => "width=device-width", :name => "viewport", "initial-scale" => 1.0}
+
+  %body{ :class => "#{yield :body_class}" }
+    = render "layouts/nav_menu"
+    = render "shared/search_bar"
+    = yield
+    = render "layouts/footer"

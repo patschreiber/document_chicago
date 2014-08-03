@@ -13,6 +13,7 @@ gem 'sass-rails', '~> 4.0.0'
 # Twitter Bootstrap Gem
 gem 'bootstrap-sass', '~> 3.2.0'
 
+gem 'autoprefixer-rails'
 gem 'devise'
 gem 'figaro'
 gem 'haml'
